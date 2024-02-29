@@ -8,19 +8,19 @@ Please follow the instructions in this document to prepare for your coding inter
 
 ## Setting Up Docker Environment
 
-It is highly advisable that the candidate follow the following instructions prior to their schedule interview to setup the required docker environment. Otherwise, valuable interview time may be wasted on setting up the docker environment.
+It is highly advisable that the candidate setup the docker environment prior to their interview. Otherwise, valuable interview time may be wasted on setting up the docker environment.
 
 ### Install Docker
 
 You will require a docker system installed on the workstation you will be using for the interview.
 
-Please see the [docker install documentation](https://docs.docker.com/engine/install/) for your operating system.
+If you do not already have docker installed, please see the [docker install documentation](https://docs.docker.com/engine/install/) for your operating system.
 
 ### Building Docker Image
 
 Ensure that you have the [make](https://www.gnu.org/software/make/) tools installed on your workstation.
 
-The [Makefile](Makefile) contains targets that can be used to build the image for [Dockerfile](docker/Dockerfile) by running:
+The [Makefile](Makefile) contains targets that can be used to build the image for this [Dockerfile](docker/Dockerfile) by running:
 
 ```
 make docker_image
@@ -34,9 +34,9 @@ If the docker image has been successfully built, you can now start the docker co
 make docker_sh
 ```
 
-##### Running Pytest Unit Tests
+##### Running Pytest
 
-It is from the docker bash terminal that we will be executing Pytest unit tests for the coding interview question.
+It is from the docker bash terminal that we will be executing [Pytest](https://docs.pytest.org/) unit tests for the coding interview question.
 
 We use the [tox](https://tox.wiki/en/4.13.0/) automation tool to manage environments for running Pytest unit tests. So from the bash terminal run:
 

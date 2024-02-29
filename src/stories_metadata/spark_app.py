@@ -38,7 +38,7 @@ def build_output_df(
     input_stories_metadata_df: DataFrame
 ) -> DataFrame:
 
-    # Impement this function according to the given requirements
+    # Implement this function according to the given requirements
     # of your coding interview question.
 
     return 
