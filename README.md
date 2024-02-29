@@ -44,11 +44,9 @@ We use the [tox](https://tox.wiki/en/4.13.0/) automation tool to manage environm
 tox
 ```
 
-See the [tox.ini](tox.ini) configuration file.
-
+This will run all the Pytest unit tests found under the [src](src) folder accoding to the settings in the [tox.ini](tox.ini) configuration file.
 
 ## Coding Interview Question
-
 
 Under the [src](src) folder there is a [stories_metadata](src/stories_metadata) subfolder.
 
