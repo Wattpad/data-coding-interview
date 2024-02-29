@@ -55,6 +55,6 @@ You will be asked to:
 
 1. Add the necessary tests cases for your implementation in [test_spark_app.py](src/stories_metadata/test_spark_app.py).
 
-The detailed requirements for the coding interview will be provided during your interview.
+The detailed requirements will be provided during your interview.
 
 It will be to your benefit to familiarize yourself with the sources in this repos beforehand.
