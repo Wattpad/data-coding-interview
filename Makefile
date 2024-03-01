@@ -8,5 +8,5 @@ docker_sh: docker_image
 		-v ${root_abspath}:/opt/spark/apps \
 		-e PYTHONPATH=/opt/spark/apps/src \
 		-w /opt/spark/apps \
-		datalake-unit-testing \
+		data-coding-env \
 		bash
