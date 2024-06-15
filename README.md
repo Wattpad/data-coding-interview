@@ -38,9 +38,9 @@ make docker_sh
 
 Your coding interview question will be based on one of the subfolders under the [src](src/) directory.
 
-The email you received regarding the technical assessment interview should have included which subfolder you have been assigned to. Go to this subfolder and familiarize yourself with the source code. It is not necessary to review the any of the other `src` subfolders.
+The email you received regarding the technical assessment interview should have included which subfolder you have been assigned to. Go to this subfolder and familiarize yourself with the source code. It is not necessary to review any of the other `src` subfolders.
 
-The detailed requirements of what will be asked of you will be provided during your interview.
+The detailed coding interview requirements will be provided during your interview.
 
 #### Running Pytest
 
