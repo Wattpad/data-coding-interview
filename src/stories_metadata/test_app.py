@@ -4,7 +4,7 @@ from pathlib import Path
 from chispa import assert_df_equality
 from pyspark.sql import SparkSession
 
-from stories_metadata import spark_app, data_sources
+from . import app, data_sources
 
 
 def test_build_output_df(spark: SparkSession, test_files_path: Path):
@@ -32,7 +32,7 @@ def test_build_output_df(spark: SparkSession, test_files_path: Path):
     # Build actual ouput dataframe with the function under test.
     # Note the `processing_dt` value for defining your test cases.
     processing_dt = datetime.date(2024, 3, 1)
-    actual_stories_metadata_df = spark_app.build_output_df(
+    actual_stories_metadata_df = app.build_output_df(
         processing_dt,
         input_stories_df,
         input_stories_metadata_df,

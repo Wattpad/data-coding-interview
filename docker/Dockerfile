@@ -8,7 +8,7 @@ RUN yum -y install python3-devel
 FROM builder as apache-spark
 
 # Install Python dependencies
-RUN pip3 install tox
+RUN pip3 install tox flake8 mypy
 
 ENV PATH="${PATH}:/opt/spark/apps/scripts"
 

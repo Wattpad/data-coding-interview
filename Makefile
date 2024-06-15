@@ -10,3 +10,11 @@ docker_sh: docker_image
 		-w /opt/spark/apps \
 		data-coding-env \
 		bash
+
+lint: docker_image
+	docker run -it \
+		-v ${root_abspath}:/opt/spark/apps \
+		-e PYTHONPATH=/opt/spark/apps/src \
+		-w /opt/spark/apps \
+		data-coding-env \
+		flake8 && mypy

@@ -5,7 +5,7 @@ import pyspark.sql.functions as F
 import pyspark.sql.types as T
 from pyspark.sql import DataFrame, SparkSession
 
-import core
+from common import spark_utils
 from stories_metadata import data_sources, udfs
 
 
@@ -25,7 +25,7 @@ def transform(
         processing_dt, stories_df, stories_metadata_df)
 
     # Save the output dataframe
-    core.save_dataframe_as_table(
+    spark_utils.save_dataframe_as_table(
         stories_metadata_df,
         table=output_stories_metadata_df,
         s3_bucket=s3_bucket,
@@ -40,8 +40,9 @@ def build_output_df(
 
     # Implement this function according to the given requirements
     # of your coding interview question.
+    output_df = ...
 
-    return 
+    return output_df
 
 
 def main(
@@ -51,9 +52,9 @@ def main(
     input_stories_table: str,
     processing_date: str
 ):
-    processing_dt = core.parse_processing_date(processing_date)
+    processing_dt = spark_utils.parse_processing_date(processing_date)
 
-    spark = core.build_spark_session(output_stories_metadata_table)
+    spark = spark_utils.build_spark_session(output_stories_metadata_table)
 
     try:
         transform(

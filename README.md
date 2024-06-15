@@ -1,6 +1,6 @@
 # Data Coding Interview
 
-This repo contains the assets for the Data team's coding interview question. It is shared with candidates prior to their scheduled interview.
+This repo contains the assets for the Data team's coding interview questions. It is shared with candidates prior to their scheduled interview.
 
 **Candidates**
 
@@ -22,7 +22,7 @@ Ensure that you have the [make](https://www.gnu.org/software/make/) tools instal
 
 The [Makefile](Makefile) contains targets that can be used to build the image for this [Dockerfile](docker/Dockerfile) by running:
 
-```
+```bash
 make docker_image
 ```
 
@@ -30,31 +30,32 @@ make docker_image
 
 If the docker image has been successfully built, you can now start the docker container and connect to it through a [bash](https://opensource.com/resources/what-bash) terminal with this target:
 
-```
+```bash
 make docker_sh
 ```
 
-##### Running Pytest
+## Coding Interview Question
 
-It is from the docker bash terminal that we will be executing [Pytest](https://docs.pytest.org/) unit tests for the coding interview question.
+Your coding interview question will be based on one of the subfolders under the [src](src/) directory.
 
-We use the [tox](https://tox.wiki/en/4.13.0/) automation tool to manage environments for running Pytest unit tests. So from the bash terminal run:
+The email you received regarding the technical assessment interview should have included which subfolder you should review. Go to this subfolder and familiarize yourself with the source code.
 
+The detailed requirements of what will be asked of you will be provided during your interview.
+
+#### Running Pytest
+
+We use the [tox](https://tox.wiki/en/4.13.0/) automation tool to manage environments for running [Pytest](https://docs.pytest.org/) unit tests.
+
+From the docker bash terminal, change directory to the subfolder under `src` that you have been assigned. For example:
+
+```bash
+cd src/stories_metadata
 ```
+
+Then to run the pytest unit tests contained under this subfolder:
+
+```bash
 tox
 ```
 
-This will run all the Pytest unit tests found under the [src](src) folder accoding to the settings in the [tox.ini](tox.ini) configuration file.
-
-## Coding Interview Question
-
-Under the [src](src) folder there is a [stories_metadata](src/stories_metadata) subfolder.
-
-You will be asked to:
-1. Implement the `build_ouput_df()` function in [spark_app.py](src/stories_metadata/spark_app.py).
-
-1. Add the necessary tests cases for your implementation in [test_spark_app.py](src/stories_metadata/test_spark_app.py).
-
-The detailed requirements will be provided during your interview.
-
-It will be to your benefit to familiarize yourself with the sources in this repos beforehand.
+Review the output. The output will indicate if the tests succeeded or not.
