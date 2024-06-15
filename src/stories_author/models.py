@@ -1,17 +1,14 @@
 """
 Contains Pydantic models required by the package.
-
 To learn more the Pydantic library, see https://docs.pydantic.dev/latest/.
 
-These models are use to simplify reading and writing CSVs.
-
+These models are used to simplify reading and writing CSVs.
 Usage example:
 ```
 import csv
 from pathlib import Path
 
 from . import models
-
 
 def read_stories_model(stories_csv_path: Path):
     with stories_csv_path.open() as stories_csv_f:
@@ -23,7 +20,6 @@ def read_stories_model(stories_csv_path: Path):
                 print(f"Failed to validate csv row: {row}. Skipping.")
                 pass
             yield Model
-
 
 def write_story_author_models(
     output_csv_path: Path
