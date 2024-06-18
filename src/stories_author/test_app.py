@@ -38,7 +38,7 @@ def test_transform(test_files_path: Path, tmp_path: Path):
 def read_csv_rows_sorted(csv_path: Path) -> List[OrderedDict[Union[str, Any], Union[str, Any]]]:
     """Reads the given csv_path and returns all its rows sorted."""
     with csv_path.open() as csv_f:
-        csv_r = csv.DictReader(csv_f)
+        csv_r = csv.reader(csv_f)
         rows = list(csv_r)
     rows.sort()
     return rows
