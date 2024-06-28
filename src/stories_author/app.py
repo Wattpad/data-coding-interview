@@ -1,8 +1,3 @@
-"""
-This is the public version of `app.py` - that will be made available in the public git repos.
-
-The candidate will be asked to make improvements.
-"""
 import csv
 from datetime import date
 from pathlib import Path
