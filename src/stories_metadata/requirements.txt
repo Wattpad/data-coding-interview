@@ -1,2 +1,2 @@
-defopt==6.0
+defopt==7.0.0
 langid==1.1.6
