@@ -16,7 +16,7 @@ def transform(
 ):
     """
     Joins records from stories_csv_p [models.Story] with the users_csv_p [models.User] records
-    on `Story.author_id=User.id`. Only Story records that that have been modified on the given
+    on `Story.author_id=User.id`. Only Story records that have been modified on the given
     modified_dt date [Story.modified_ts=modified_dt] are selected.
 
     The result is then outputted as CSV to output_stories_author_csv_p [models.StoryAuthor].

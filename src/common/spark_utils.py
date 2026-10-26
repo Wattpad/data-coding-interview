@@ -11,7 +11,7 @@ def build_spark_session(
     master: str = 'yarn',
     checkpoint_path: str = 'hdfs:///checkpoints',
 ) -> SparkSession:
-    """Build and return a SparkSession optionally include additional python files.
+    """Build and return a SparkSession optionally including additional python files.
 
     :param application_name: name of the spark application
     :param master: URI of the master
@@ -56,7 +56,7 @@ def save_dataframe_as_table(
 
     # Using `df.saveAsTable()` will *recreate* a table if exists.
     # This causes AWS Glue to recrawl the table location for all existing partitions.
-    # So overtime, the runtime of `df.saveAsTable()` increases due to this recrawl.
+    # So over time, the runtime of `df.saveAsTable()` increases due to this recrawl.
     # Therefore, we attempt `df.insertInto()` first on tables with partition_keys.
     try:
         df_writer.insertInto(table, overwrite=True)

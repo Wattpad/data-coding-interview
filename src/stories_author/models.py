@@ -1,6 +1,6 @@
 """
 Contains Pydantic models required by the package.
-To learn more the Pydantic library, see https://docs.pydantic.dev/latest/.
+To learn more about the Pydantic library, see https://docs.pydantic.dev/latest/.
 
 These models are used to simplify reading and writing CSVs.
 Usage example:
